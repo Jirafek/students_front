@@ -43,7 +43,7 @@ function App() {
               </tr>
             </thead>
             <tbody>
-              {data[subject].map((item, i) => (
+              {data[subject].sort((a, b) => b.score - a.score).map((item, i) => (
                 <tr key={i}>
                   <td>
                     <a href={`https://t.me/${item.username}`}>{item.name}</a>
